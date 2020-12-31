@@ -407,13 +407,6 @@ public class ClientEvents {
     }
 
     @SubscribeEvent
-    public void onGuiOpened(GuiOpenEvent event) {
-        if (IafConfig.customMainMenu && event.getGui() instanceof MainMenuScreen && !(event.getGui() instanceof IceAndFireMainMenu)) {
-            event.setGui(new IceAndFireMainMenu());
-        }
-    }
-
-    @SubscribeEvent
     public void onEntityMount(EntityMountEvent event) {
         if (IafConfig.dragonAuto3rdPerson) {
             if (event.getEntityBeingMounted() instanceof EntityDragonBase && event.getWorldObj().isRemote && event.getEntityMounting() == Minecraft.getInstance().player) {
