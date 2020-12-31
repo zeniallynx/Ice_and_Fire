@@ -10,8 +10,6 @@ import com.github.alexthe666.citadel.client.model.TabulaModel;
 import com.github.alexthe666.citadel.client.model.TabulaModelHandler;
 import com.github.alexthe666.iceandfire.block.IafBlockRegistry;
 import com.github.alexthe666.iceandfire.client.IafKeybindRegistry;
-import com.github.alexthe666.iceandfire.client.gui.GuiMyrmexAddRoom;
-import com.github.alexthe666.iceandfire.client.gui.GuiMyrmexStaff;
 import com.github.alexthe666.iceandfire.client.gui.IafGuiRegistry;
 import com.github.alexthe666.iceandfire.client.gui.bestiary.GuiBestiary;
 import com.github.alexthe666.iceandfire.client.model.ModelCopperArmor;
@@ -22,11 +20,6 @@ import com.github.alexthe666.iceandfire.client.model.ModelDragonsteelLightningAr
 import com.github.alexthe666.iceandfire.client.model.ModelFireDragonArmor;
 import com.github.alexthe666.iceandfire.client.model.ModelIceDragonArmor;
 import com.github.alexthe666.iceandfire.client.model.ModelLightningDragonArmor;
-import com.github.alexthe666.iceandfire.client.model.ModelMyrmexQueen;
-import com.github.alexthe666.iceandfire.client.model.ModelMyrmexRoyal;
-import com.github.alexthe666.iceandfire.client.model.ModelMyrmexSentinel;
-import com.github.alexthe666.iceandfire.client.model.ModelMyrmexSoldier;
-import com.github.alexthe666.iceandfire.client.model.ModelMyrmexWorker;
 import com.github.alexthe666.iceandfire.client.model.ModelSeaSerpentArmor;
 import com.github.alexthe666.iceandfire.client.model.ModelSilverArmor;
 import com.github.alexthe666.iceandfire.client.model.ModelTrollArmor;
@@ -76,8 +69,6 @@ import com.github.alexthe666.iceandfire.client.render.entity.RenderHydra;
 import com.github.alexthe666.iceandfire.client.render.entity.RenderHydraArrow;
 import com.github.alexthe666.iceandfire.client.render.entity.RenderLightningDragon;
 import com.github.alexthe666.iceandfire.client.render.entity.RenderMobSkull;
-import com.github.alexthe666.iceandfire.client.render.entity.RenderMyrmexBase;
-import com.github.alexthe666.iceandfire.client.render.entity.RenderMyrmexEgg;
 import com.github.alexthe666.iceandfire.client.render.entity.RenderNothing;
 import com.github.alexthe666.iceandfire.client.render.entity.RenderPixie;
 import com.github.alexthe666.iceandfire.client.render.entity.RenderSeaSerpent;
@@ -102,7 +93,6 @@ import com.github.alexthe666.iceandfire.client.render.tile.RenderPodium;
 import com.github.alexthe666.iceandfire.entity.EntityDragonBase;
 import com.github.alexthe666.iceandfire.entity.IafEntityRegistry;
 import com.github.alexthe666.iceandfire.entity.tile.IafTileEntityRegistry;
-import com.github.alexthe666.iceandfire.entity.util.MyrmexHive;
 import com.github.alexthe666.iceandfire.event.ClientEvents;
 import com.github.alexthe666.iceandfire.event.PlayerRenderEvents;
 import com.github.alexthe666.iceandfire.item.IafItemRegistry;
@@ -164,24 +154,15 @@ public class ClientProxy extends CommonProxy {
     public static TabulaModel ICE_DRAGON_BASE_MODEL;
     public static TabulaModel SEA_SERPENT_BASE_MODEL;
     public static TabulaModel LIGHTNING_DRAGON_BASE_MODEL;
-    private static MyrmexHive referedClientHive = null;
     private FontRenderer bestiaryFontRenderer;
     private int previousViewType = 0;
     private int thirdPersonViewDragon = 0;
     private Entity referencedMob = null;
     private TileEntity referencedTE = null;
 
-    public static MyrmexHive getReferedClientHive() {
-        return referedClientHive;
-    }
-
     @OnlyIn(Dist.CLIENT)
     private static Callable<ItemStackTileEntityRenderer> getTEISR() {
         return IceAndFireTEISR::new;
-    }
-
-    public void setReferencedHive(MyrmexHive hive) {
-        referedClientHive = hive;
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -246,13 +227,6 @@ public class ClientProxy extends CommonProxy {
         RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.STYMPHALIAN_FEATHER, manager -> new RenderStymphalianFeather(manager));
         RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.STYMPHALIAN_ARROW, manager -> new RenderStymphalianArrow(manager));
         RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.TROLL, manager -> new RenderTroll(manager));
-        RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.MYRMEX_WORKER, manager -> new RenderMyrmexBase(manager, new ModelMyrmexWorker(), 0.5F));
-        RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.MYRMEX_SOLDIER, manager -> new RenderMyrmexBase(manager, new ModelMyrmexSoldier(), 0.75F));
-        RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.MYRMEX_QUEEN, manager -> new RenderMyrmexBase(manager, new ModelMyrmexQueen(), 1.25F));
-        RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.MYRMEX_EGG, manager -> new RenderMyrmexEgg(manager));
-        RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.MYRMEX_SENTINEL, manager -> new RenderMyrmexBase(manager, new ModelMyrmexSentinel(), 0.85F));
-        RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.MYRMEX_ROYAL, manager -> new RenderMyrmexBase(manager, new ModelMyrmexRoyal(), 0.75F));
-        RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.MYRMEX_SWARMER, manager -> new RenderMyrmexBase(manager, new ModelMyrmexRoyal(), 0.25F));
         RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.AMPHITHERE, manager -> new RenderAmphithere(manager));
         RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.AMPHITHERE_ARROW, manager -> new RenderAmphithereArrow(manager));
         RenderingRegistry.registerEntityRenderingHandler(IafEntityRegistry.SEA_SERPENT, manager -> new RenderSeaSerpent(manager, SEA_SERPENT_BASE_MODEL));
@@ -418,18 +392,6 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void openBestiaryGui(ItemStack book) {
         Minecraft.getInstance().displayGuiScreen(new GuiBestiary(book));
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    @Override
-    public void openMyrmexStaffGui(ItemStack staff) {
-        Minecraft.getInstance().displayGuiScreen(new GuiMyrmexStaff(staff));
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    @Override
-    public void openMyrmexAddRoomGui(ItemStack staff, BlockPos pos, Direction facing) {
-        Minecraft.getInstance().displayGuiScreen(new GuiMyrmexAddRoom(staff, pos, facing));
     }
 
     @OnlyIn(Dist.CLIENT)

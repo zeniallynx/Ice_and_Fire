@@ -238,7 +238,7 @@ public class IafItemRegistry {
     public static final Item STYMPHALIAN_FEATHER_BUNDLE = new ItemStymphalianFeatherBundle();
     public static final Item STYMPHALIAN_DAGGER = new ItemStymphalianDagger();
     public static final Item TROLL_TUSK = new ItemGeneric("troll_tusk");
-    public static final Item MYRMEX_DESERT_EGG = new ItemMyrmexEgg(false);
+    /*public static final Item MYRMEX_DESERT_EGG = new ItemMyrmexEgg(false);
     public static final Item MYRMEX_JUNGLE_EGG = new ItemMyrmexEgg(true);
     public static final Item MYRMEX_DESERT_RESIN = new ItemGeneric("myrmex_desert_resin");
     public static final Item MYRMEX_JUNGLE_RESIN = new ItemGeneric("myrmex_jungle_resin");
@@ -268,7 +268,7 @@ public class IafItemRegistry {
     public static final Item MYRMEX_JUNGLE_LEGGINGS = new ItemModArmor(MYRMEX_JUNGLE_ARMOR_MATERIAL, EquipmentSlotType.LEGS, "myrmex_jungle_leggings");
     public static final Item MYRMEX_JUNGLE_BOOTS = new ItemModArmor(MYRMEX_JUNGLE_ARMOR_MATERIAL, EquipmentSlotType.FEET, "myrmex_jungle_boots");
     public static final Item MYMREX_DESERT_SWARM = new ItemMyrmexSwarm(false);
-    public static final Item MYMREX_JUNGLE_SWARM = new ItemMyrmexSwarm(true);
+    public static final Item MYMREX_JUNGLE_SWARM = new ItemMyrmexSwarm(true);*/
     public static final Item AMPHITHERE_FEATHER = new ItemGeneric("amphithere_feather");
     public static final Item AMPHITHERE_ARROW = new ItemAmphithereArrow();
     public static final Item AMPHITHERE_MACUAHUITL = new ItemAmphithereMacuahuitl();
@@ -411,11 +411,6 @@ public class IafItemRegistry {
         event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.COCKATRICE, 0X8F5005, 0X4F5A23, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_cockatrice"));
         event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.STYMPHALIAN_BIRD, 0X744F37, 0X9E6C4B, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_stymphalian_bird"));
         event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.TROLL, 0X3D413D, 0X58433A, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_troll"));
-        event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.MYRMEX_WORKER, 0XA16026, 0X594520, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_myrmex_worker"));
-        event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.MYRMEX_SOLDIER, 0XA16026, 0X7D622D, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_myrmex_soldier"));
-        event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.MYRMEX_SENTINEL, 0XA16026, 0XA27F3A, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_myrmex_sentinel"));
-        event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.MYRMEX_ROYAL, 0XA16026, 0XC79B48, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_myrmex_royal"));
-        event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.MYRMEX_QUEEN, 0XA16026, 0XECB855, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_myrmex_queen"));
         event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.AMPHITHERE, 0X597535, 0X00AA98, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_amphithere"));
         event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.SEA_SERPENT, 0X008299, 0XC5E6E7, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_sea_serpent"));
         event.getRegistry().register(new SpawnEggItem(IafEntityRegistry.DREAD_THRALL, 0XE0E6E6, 0X00FFFF, new Item.Properties().group(IceAndFire.TAB_ITEMS)).setRegistryName("iceandfire:spawn_egg_dread_thrall"));

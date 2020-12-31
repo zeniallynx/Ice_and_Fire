@@ -88,9 +88,6 @@ public class ItemModHoe extends HoeItem {
         if (this == IafItemRegistry.SILVER_HOE) {
             tooltip.add(new TranslationTextComponent("silvertools.hurt").func_240699_a_(TextFormatting.GREEN));
         }
-        if (this == IafItemRegistry.MYRMEX_DESERT_HOE || this == IafItemRegistry.MYRMEX_JUNGLE_HOE) {
-            tooltip.add(new TranslationTextComponent("myrmextools.hurt").func_240699_a_(TextFormatting.GREEN));
-        }
         if (toolMaterial == IafItemRegistry.DRAGONSTEEL_FIRE_TOOL_MATERIAL) {
             tooltip.add(new TranslationTextComponent("dragon_sword_fire.hurt2").func_240699_a_(TextFormatting.DARK_RED));
         }

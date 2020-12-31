@@ -24,7 +24,6 @@ import com.github.alexthe666.iceandfire.world.gen.WorldGenIceDragonCave;
 import com.github.alexthe666.iceandfire.world.gen.WorldGenIceDragonRoosts;
 import com.github.alexthe666.iceandfire.world.gen.WorldGenLightningDragonCave;
 import com.github.alexthe666.iceandfire.world.gen.WorldGenLightningDragonRoosts;
-import com.github.alexthe666.iceandfire.world.gen.WorldGenMyrmexHive;
 import com.github.alexthe666.iceandfire.world.gen.WorldGenPixieVillage;
 import com.github.alexthe666.iceandfire.world.gen.WorldGenSirenIsland;
 import com.github.alexthe666.iceandfire.world.structure.DreadMausoleumStructure;
@@ -38,7 +37,6 @@ import com.google.common.collect.ImmutableList;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -64,10 +62,8 @@ import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.placement.IPlacementConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.settings.StructureSeparationSettings;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
 
 public class IafWorldRegistry {
 
@@ -81,8 +77,8 @@ public class IafWorldRegistry {
     public static Feature<NoFeatureConfig> PIXIE_VILLAGE;
     public static Feature<NoFeatureConfig> SIREN_ISLAND;
     public static Feature<NoFeatureConfig> HYDRA_CAVE;
-    public static Feature<NoFeatureConfig> MYRMEX_HIVE_DESERT;
-    public static Feature<NoFeatureConfig> MYRMEX_HIVE_JUNGLE;
+    //public static Feature<NoFeatureConfig> MYRMEX_HIVE_DESERT;
+    //public static Feature<NoFeatureConfig> MYRMEX_HIVE_JUNGLE;
     public static Feature<NoFeatureConfig> SPAWN_DEATH_WORM;
     public static Feature<NoFeatureConfig> SPAWN_DRAGON_SKELETON_L;
     public static Feature<NoFeatureConfig> SPAWN_DRAGON_SKELETON_F;
@@ -115,8 +111,8 @@ public class IafWorldRegistry {
     public static ConfiguredFeature PIXIE_VILLAGE_CF;
     public static ConfiguredFeature SIREN_ISLAND_CF;
     public static ConfiguredFeature HYDRA_CAVE_CF;
-    public static ConfiguredFeature MYRMEX_HIVE_DESERT_CF;
-    public static ConfiguredFeature MYRMEX_HIVE_JUNGLE_CF;
+    //public static ConfiguredFeature MYRMEX_HIVE_DESERT_CF;
+    //public static ConfiguredFeature MYRMEX_HIVE_JUNGLE_CF;
     public static ConfiguredFeature SPAWN_DEATH_WORM_CF;
     public static ConfiguredFeature SPAWN_DRAGON_SKELETON_L_CF;
     public static ConfiguredFeature SPAWN_DRAGON_SKELETON_F_CF;
@@ -143,8 +139,8 @@ public class IafWorldRegistry {
         PIXIE_VILLAGE = registerFeature("iceandfire:pixie_village", new WorldGenPixieVillage(NoFeatureConfig.field_236558_a_));
         SIREN_ISLAND = registerFeature("iceandfire:siren_island", new WorldGenSirenIsland(NoFeatureConfig.field_236558_a_));
         HYDRA_CAVE = registerFeature("iceandfire:hydra_cave", new WorldGenHydraCave(NoFeatureConfig.field_236558_a_));
-        MYRMEX_HIVE_DESERT = registerFeature("iceandfire:myrmex_hive_desert", new WorldGenMyrmexHive(false, false, NoFeatureConfig.field_236558_a_));
-        MYRMEX_HIVE_JUNGLE = registerFeature("iceandfire:myrmex_hive_jungle", new WorldGenMyrmexHive(false, true, NoFeatureConfig.field_236558_a_));
+        //MYRMEX_HIVE_DESERT = registerFeature("iceandfire:myrmex_hive_desert", new WorldGenMyrmexHive(false, false, NoFeatureConfig.field_236558_a_));
+        //MYRMEX_HIVE_JUNGLE = registerFeature("iceandfire:myrmex_hive_jungle", new WorldGenMyrmexHive(false, true, NoFeatureConfig.field_236558_a_));
 
         SPAWN_DEATH_WORM = registerFeature("iceandfire:spawn_death_worm", new SpawnDeathWorm(NoFeatureConfig.field_236558_a_));
         SPAWN_DRAGON_SKELETON_L = registerFeature("iceandfire:spawn_dragon_skeleton_l", new SpawnDragonSkeleton(IafEntityRegistry.LIGHTNING_DRAGON, NoFeatureConfig.field_236558_a_));
@@ -195,8 +191,8 @@ public class IafWorldRegistry {
         PIXIE_VILLAGE_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:pixie_village", PIXIE_VILLAGE.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         SIREN_ISLAND_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:siren_island", SIREN_ISLAND.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         HYDRA_CAVE_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:hydra_cave", HYDRA_CAVE.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-        MYRMEX_HIVE_DESERT_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:myrmex_hive_desert", MYRMEX_HIVE_DESERT.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
-        MYRMEX_HIVE_JUNGLE_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:myrmex_hive_jungle", MYRMEX_HIVE_JUNGLE.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        //MYRMEX_HIVE_DESERT_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:myrmex_hive_desert", MYRMEX_HIVE_DESERT.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
+        //MYRMEX_HIVE_JUNGLE_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:myrmex_hive_jungle", MYRMEX_HIVE_JUNGLE.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         
         SPAWN_DEATH_WORM_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:spawn_death_worm_misc", SPAWN_DEATH_WORM.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         SPAWN_DRAGON_SKELETON_L_CF = Registry.register(WorldGenRegistries.field_243653_e, "iceandfire:spawn_dragon_skeleton_l_misc", SPAWN_DRAGON_SKELETON_L.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
@@ -334,8 +330,8 @@ public class IafWorldRegistry {
     	LOADED_FEATURES.put("PIXIE_VILLAGE_CF", false);
     	LOADED_FEATURES.put("SIREN_ISLAND_CF", false);
     	LOADED_FEATURES.put("HYDRA_CAVE_CF", false);
-    	LOADED_FEATURES.put("MYRMEX_HIVE_DESERT_CF", false);
-    	LOADED_FEATURES.put("MYRMEX_HIVE_JUNGLE_CF", false);
+    	//LOADED_FEATURES.put("MYRMEX_HIVE_DESERT_CF", false);
+    	//LOADED_FEATURES.put("MYRMEX_HIVE_JUNGLE_CF", false);
     	LOADED_FEATURES.put("SPAWN_DEATH_WORM_CF", false);
     	LOADED_FEATURES.put("SPAWN_DRAGON_SKELETON_L_CF", false);
     	LOADED_FEATURES.put("SPAWN_DRAGON_SKELETON_F_CF", false);
@@ -424,14 +420,14 @@ public class IafWorldRegistry {
             event.getGeneration().func_242516_a(GRAVEYARD_CF);
         	LOADED_FEATURES.put("GRAVEYARD_CF", true);
         }
-        if (IafConfig.generateMyrmexColonies && IAFBiomeUtil.parseListForBiomeCheck(BiomeConfig.desertMyrmexBiomes, biome)) {
+        /*if (IafConfig.generateMyrmexColonies && IAFBiomeUtil.parseListForBiomeCheck(BiomeConfig.desertMyrmexBiomes, biome)) {
             event.getGeneration().func_242513_a(GenerationStage.Decoration.SURFACE_STRUCTURES, MYRMEX_HIVE_DESERT_CF);
         	LOADED_FEATURES.put("MYRMEX_HIVE_DESERT_CF", true);
         }
         if (IafConfig.generateMyrmexColonies && IAFBiomeUtil.parseListForBiomeCheck(BiomeConfig.jungleMyrmexBiomes, biome)) {
             event.getGeneration().func_242513_a(GenerationStage.Decoration.SURFACE_STRUCTURES, MYRMEX_HIVE_JUNGLE_CF);
         	LOADED_FEATURES.put("MYRMEX_HIVE_JUNGLE_CF", true);
-        }
+        }*/
         if (IafConfig.generateMyrmexColonies && IAFBiomeUtil.parseListForBiomeCheck(BiomeConfig.sirenBiomes, biome)) {
             event.getGeneration().func_242513_a(GenerationStage.Decoration.SURFACE_STRUCTURES, SIREN_ISLAND_CF);
         	LOADED_FEATURES.put("SIREN_ISLAND_CF", true);

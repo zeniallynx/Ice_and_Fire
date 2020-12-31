@@ -5,7 +5,6 @@ import javax.annotation.Nullable;
 import com.github.alexthe666.iceandfire.IceAndFire;
 import com.github.alexthe666.iceandfire.inventory.ContainerPodium;
 import com.github.alexthe666.iceandfire.item.ItemDragonEgg;
-import com.github.alexthe666.iceandfire.item.ItemMyrmexEgg;
 import com.github.alexthe666.iceandfire.message.MessageUpdatePodium;
 
 import net.minecraft.block.BlockState;
@@ -134,7 +133,7 @@ public class TileEntityPodium extends LockableTileEntity implements ITickableTil
 
     @Override
     public boolean canInsertItem(int index, ItemStack stack, Direction direction) {
-        return index != 0 || (stack.getItem() instanceof ItemDragonEgg || stack.getItem() instanceof ItemMyrmexEgg);
+        return false;
     }
 
     @Override

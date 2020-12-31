@@ -2,12 +2,9 @@ package com.github.alexthe666.iceandfire.client.render.tile;
 
 import com.github.alexthe666.iceandfire.client.model.ModelDragonEgg;
 import com.github.alexthe666.iceandfire.client.render.entity.RenderDragonEgg;
-import com.github.alexthe666.iceandfire.client.render.entity.RenderMyrmexEgg;
 import com.github.alexthe666.iceandfire.entity.tile.TileEntityPodium;
 import com.github.alexthe666.iceandfire.enums.EnumDragonEgg;
-import com.github.alexthe666.iceandfire.item.IafItemRegistry;
 import com.github.alexthe666.iceandfire.item.ItemDragonEgg;
-import com.github.alexthe666.iceandfire.item.ItemMyrmexEgg;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 import net.minecraft.client.Minecraft;
@@ -69,17 +66,6 @@ public class RenderPodium<T extends TileEntityPodium> extends TileEntityRenderer
                 matrixStackIn.push();
                 model.renderPodium();
                 model.render(matrixStackIn, bufferIn.getBuffer(RenderPodium.getEggTexture(item.type)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
-                matrixStackIn.pop();
-                matrixStackIn.pop();
-                matrixStackIn.pop();
-            } else if (podium.getStackInSlot(0).getItem() instanceof ItemMyrmexEgg) {
-                boolean jungle = podium.getStackInSlot(0).getItem() == IafItemRegistry.MYRMEX_JUNGLE_EGG;
-                matrixStackIn.push();
-                matrixStackIn.translate(0.5F, 0.475F, 0.5F);
-                matrixStackIn.push();
-                matrixStackIn.push();
-                model.renderPodium();
-                model.render(matrixStackIn, bufferIn.getBuffer(RenderType.getEntityCutout(jungle ? RenderMyrmexEgg.EGG_JUNGLE : RenderMyrmexEgg.EGG_DESERT)), combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
                 matrixStackIn.pop();
                 matrixStackIn.pop();
                 matrixStackIn.pop();

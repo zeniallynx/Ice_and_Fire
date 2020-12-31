@@ -1,7 +1,6 @@
 package com.github.alexthe666.iceandfire.block;
 
 import com.github.alexthe666.iceandfire.IceAndFire;
-import com.github.alexthe666.iceandfire.entity.EntityMyrmexBase;
 import com.github.alexthe666.iceandfire.item.ICustomRendered;
 
 import net.minecraft.block.Block;
@@ -33,14 +32,5 @@ public class BlockMyrmexResin extends Block implements ICustomRendered {
     @Deprecated
     public boolean canEntitySpawn(BlockState state, IBlockReader worldIn, BlockPos pos, EntityType<?> type) {
         return false;
-    }
-
-    public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entity) {
-        if (sticky) {
-            if (!(entity instanceof EntityMyrmexBase)) {
-                entity.setMotion(entity.getMotion().mul(0.4D, 0.4D, 0.4D));
-            }
-
-        }
     }
 }

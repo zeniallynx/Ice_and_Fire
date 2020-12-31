@@ -224,7 +224,7 @@ public class IceAndFireMainMenu extends MainMenuScreen {
         GlStateManager.enableTexture();
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.enableBlend();
-        this.getMinecraft().fontRenderer.func_238405_a_(ms, "Ice and Fire " + TextFormatting.YELLOW + IceAndFire.VERSION, 2, height - 10, 0xFFFFFFFF);
+        this.getMinecraft().fontRenderer.func_238405_a_(ms, "Dracarys IAF " + TextFormatting.YELLOW + IceAndFire.VERSION, 2, height - 10, 0xFFFFFFFF);
         GlStateManager.pushMatrix();
         this.getMinecraft().getTextureManager().bindTexture(MINECRAFT_TITLE_TEXTURES);
         GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F);

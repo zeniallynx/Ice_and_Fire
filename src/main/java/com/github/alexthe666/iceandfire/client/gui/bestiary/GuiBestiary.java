@@ -700,33 +700,33 @@ public class GuiBestiary extends Screen {
                     drawImage(ms, DRAWINGS_1, 25, 13, 202, 79, 76, 24, 512F);
                     drawImage(ms, DRAWINGS_1, 25, 40, 278, 79, 76, 24, 512F);
                     ms.pop();
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_DESERT_CHITIN), 125, 43, 2F);
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_JUNGLE_CHITIN), 155, 43, 2F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_DESERT_CHITIN), 125, 43, 2F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_JUNGLE_CHITIN), 155, 43, 2F);
                     int i = 133;
                     boolean jungle = Minecraft.getInstance().player.ticksExisted % 60 > 30;
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_SHOVEL : IafItemRegistry.MYRMEX_DESERT_SHOVEL), i += 16, 100, 1.51F);
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_PICKAXE : IafItemRegistry.MYRMEX_DESERT_PICKAXE), i += 16, 100, 1.5F);
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_AXE : IafItemRegistry.MYRMEX_DESERT_AXE), i += 16, 100, 1.5F);
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_SWORD : IafItemRegistry.MYRMEX_DESERT_SWORD), i += 16, 100, 1.5F);
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_SWORD_VENOM : IafItemRegistry.MYRMEX_DESERT_SWORD_VENOM), i += 16, 100, 1.5F);
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_HOE : IafItemRegistry.MYRMEX_DESERT_HOE), i += 16, 100, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_SHOVEL : IafItemRegistry.MYRMEX_DESERT_SHOVEL), i += 16, 100, 1.51F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_PICKAXE : IafItemRegistry.MYRMEX_DESERT_PICKAXE), i += 16, 100, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_AXE : IafItemRegistry.MYRMEX_DESERT_AXE), i += 16, 100, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_SWORD : IafItemRegistry.MYRMEX_DESERT_SWORD), i += 16, 100, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_SWORD_VENOM : IafItemRegistry.MYRMEX_DESERT_SWORD_VENOM), i += 16, 100, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_HOE : IafItemRegistry.MYRMEX_DESERT_HOE), i += 16, 100, 1.5F);
                     int j = 148;
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_HELMET : IafItemRegistry.MYRMEX_DESERT_HELMET), j += 16, 115, 1.5F);
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_CHESTPLATE : IafItemRegistry.MYRMEX_DESERT_CHESTPLATE), j += 16, 115, 1.5F);
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_LEGGINGS : IafItemRegistry.MYRMEX_DESERT_LEGGINGS), j += 16, 115, 1.5F);
-                    drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_BOOTS : IafItemRegistry.MYRMEX_DESERT_BOOTS), j += 16, 115, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_HELMET : IafItemRegistry.MYRMEX_DESERT_HELMET), j += 16, 115, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_CHESTPLATE : IafItemRegistry.MYRMEX_DESERT_CHESTPLATE), j += 16, 115, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_LEGGINGS : IafItemRegistry.MYRMEX_DESERT_LEGGINGS), j += 16, 115, 1.5F);
+                    //drawItemStack(ms, new ItemStack(jungle ? IafItemRegistry.MYRMEX_JUNGLE_BOOTS : IafItemRegistry.MYRMEX_DESERT_BOOTS), j += 16, 115, 1.5F);
                 }
                 if (bookPages == 3) {
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_STINGER), 35, 22, 2.5F);
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_DESERT_RESIN), 25, 64, 2F);
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_JUNGLE_RESIN), 55, 64, 2F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_STINGER), 35, 22, 2.5F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_DESERT_RESIN), 25, 64, 2F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_JUNGLE_RESIN), 55, 64, 2F);
                 }
                 if (bookPages == 4) {
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_DESERT_STAFF), 25, 73, 2F);
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_JUNGLE_STAFF), 55, 73, 2F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_DESERT_STAFF), 25, 73, 2F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_JUNGLE_STAFF), 55, 73, 2F);
 
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_DESERT_EGG), 125, 90, 2F);
-                    drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_JUNGLE_EGG), 155, 90, 2F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_DESERT_EGG), 125, 90, 2F);
+                    //drawItemStack(ms, new ItemStack(IafItemRegistry.MYRMEX_JUNGLE_EGG), 155, 90, 2F);
                 }
                 break;
             case AMPHITHERE:

@@ -60,12 +60,6 @@ public class IafEntityRegistry {
     public static final EntityType<EntityStymphalianFeather> STYMPHALIAN_FEATHER = registerEntity(EntityType.Builder.create(EntityStymphalianFeather::new, EntityClassification.MISC).size(0.5F, 0.5F).setCustomClientFactory(EntityStymphalianFeather::new), "stymphalian_feather");
     public static final EntityType<EntityStymphalianArrow> STYMPHALIAN_ARROW = registerEntity(EntityType.Builder.create(EntityStymphalianArrow::new, EntityClassification.MISC).size(0.5F, 0.5F).setCustomClientFactory(EntityStymphalianArrow::new), "stymphalian_arrow");
     public static final EntityType<EntityTroll> TROLL = registerEntity(EntityType.Builder.create(EntityTroll::new, EntityClassification.CREATURE).size(1.2F, 3.5F), "troll");
-    public static final EntityType<EntityMyrmexWorker> MYRMEX_WORKER = registerEntity(EntityType.Builder.create(EntityMyrmexWorker::new, EntityClassification.CREATURE).size(0.9F, 0.9F), "myrmex_worker");
-    public static final EntityType<EntityMyrmexSoldier> MYRMEX_SOLDIER = registerEntity(EntityType.Builder.create(EntityMyrmexSoldier::new, EntityClassification.CREATURE).size(0.9F, 0.95F), "myrmex_soldier");
-    public static final EntityType<EntityMyrmexSentinel> MYRMEX_SENTINEL = registerEntity(EntityType.Builder.create(EntityMyrmexSentinel::new, EntityClassification.CREATURE).size(1.3F, 1.95F), "myrmex_sentinel");
-    public static final EntityType<EntityMyrmexRoyal> MYRMEX_ROYAL = registerEntity(EntityType.Builder.create(EntityMyrmexRoyal::new, EntityClassification.CREATURE).size(1.9F, 1.86F), "myrmex_royal");
-    public static final EntityType<EntityMyrmexQueen> MYRMEX_QUEEN = registerEntity(EntityType.Builder.create(EntityMyrmexQueen::new, EntityClassification.CREATURE).size(2.9F, 1.86F), "myrmex_queen");
-    public static final EntityType<EntityMyrmexEgg> MYRMEX_EGG = registerEntity(EntityType.Builder.create(EntityMyrmexEgg::new, EntityClassification.MISC).size(0.45F, 0.55F), "myrmex_egg");
     public static final EntityType<EntityAmphithere> AMPHITHERE = registerEntity(EntityType.Builder.create(EntityAmphithere::new, EntityClassification.CREATURE).size(2.5F, 1.25F).setTrackingRange(128), "amphithere");
     public static final EntityType<EntityAmphithereArrow> AMPHITHERE_ARROW = registerEntity(EntityType.Builder.create(EntityAmphithereArrow::new, EntityClassification.MISC).size(0.5F, 0.5F).setCustomClientFactory(EntityAmphithereArrow::new), "amphithere_arrow");
     public static final EntityType<EntitySeaSerpent> SEA_SERPENT = registerEntity(EntityType.Builder.create(EntitySeaSerpent::new, EntityClassification.CREATURE).size(0.5F, 0.5F).setTrackingRange(256), "sea_serpent");
@@ -73,7 +67,6 @@ public class IafEntityRegistry {
     public static final EntityType<EntitySeaSerpentArrow> SEA_SERPENT_ARROW = registerEntity(EntityType.Builder.create(EntitySeaSerpentArrow::new, EntityClassification.MISC).size(0.5F, 0.5F).setCustomClientFactory(EntitySeaSerpentArrow::new), "sea_serpent_arrow");
     public static final EntityType<EntityChainTie> CHAIN_TIE = registerEntity(EntityType.Builder.create(EntityChainTie::new, EntityClassification.MISC).size(0.8F, 0.9F), "chain_tie");
     public static final EntityType<EntityPixieCharge> PIXIE_CHARGE = registerEntity(EntityType.Builder.create(EntityPixieCharge::new, EntityClassification.MISC).size(0.5F, 0.5F).setCustomClientFactory(EntityPixieCharge::new), "pixie_charge");
-    public static final EntityType<EntityMyrmexSwarmer> MYRMEX_SWARMER = registerEntity(EntityType.Builder.create(EntityMyrmexSwarmer::new, EntityClassification.CREATURE).size(0.5F, 0.5F), "myrmex_swarmer");
     public static final EntityType<EntityTideTrident> TIDE_TRIDENT = registerEntity(EntityType.Builder.create(EntityTideTrident::new, EntityClassification.MISC).size(0.85F, 0.5F).setCustomClientFactory(EntityTideTrident::new), "tide_trident");
     public static final EntityType<EntityMobSkull> MOB_SKULL = registerEntity(EntityType.Builder.create(EntityMobSkull::new, EntityClassification.MISC).size(0.85F, 0.85F), "mob_skull");
     public static final EntityType<EntityDreadThrall> DREAD_THRALL = registerEntity(EntityType.Builder.create(EntityDreadThrall::new, EntityClassification.CREATURE).size(0.6F, 1.8F), "dread_thrall");
@@ -121,13 +114,6 @@ public class IafEntityRegistry {
         GlobalEntityTypeAttributes.put(COCKATRICE, EntityCockatrice.bakeAttributes().func_233813_a_());
         GlobalEntityTypeAttributes.put(STYMPHALIAN_BIRD, EntityStymphalianBird.bakeAttributes().func_233813_a_());
         GlobalEntityTypeAttributes.put(TROLL, EntityTroll.bakeAttributes().func_233813_a_());
-        GlobalEntityTypeAttributes.put(MYRMEX_WORKER, EntityMyrmexWorker.bakeAttributes().func_233813_a_());
-        GlobalEntityTypeAttributes.put(MYRMEX_SOLDIER, EntityMyrmexSoldier.bakeAttributes().func_233813_a_());
-        GlobalEntityTypeAttributes.put(MYRMEX_SENTINEL, EntityMyrmexSentinel.bakeAttributes().func_233813_a_());
-        GlobalEntityTypeAttributes.put(MYRMEX_ROYAL, EntityMyrmexRoyal.bakeAttributes().func_233813_a_());
-        GlobalEntityTypeAttributes.put(MYRMEX_QUEEN, EntityMyrmexQueen.bakeAttributes().func_233813_a_());
-        GlobalEntityTypeAttributes.put(MYRMEX_EGG, EntityMyrmexEgg.bakeAttributes().func_233813_a_());
-        GlobalEntityTypeAttributes.put(MYRMEX_SWARMER, EntityMyrmexSwarmer.bakeAttributes().func_233813_a_());
         GlobalEntityTypeAttributes.put(AMPHITHERE, EntityAmphithere.bakeAttributes().func_233813_a_());
         GlobalEntityTypeAttributes.put(SEA_SERPENT, EntitySeaSerpent.bakeAttributes().func_233813_a_());
         GlobalEntityTypeAttributes.put(MOB_SKULL, EntityMobSkull.bakeAttributes().func_233813_a_());
